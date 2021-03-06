@@ -1,6 +1,7 @@
 
 import {Link} from 'gatsby'
 import {FiInfo} from 'react-icons/fi'
+import {Counter, LikeButton }from '../components/Complete'
 
 <section className='mdx-page'>
 
@@ -29,5 +30,35 @@ import {FiInfo} from 'react-icons/fi'
    Literally ethical cred, brunch organic vexillologist chartreuse freegan mlkshk pop-up pickled try-hard kickstarter. Direct trade poke mixtape typewriter you probably haven't heard of them pug 3 wolf moon beard art party ennui butcher yuccie distillery pop-up. Tilde edison bulb kickstarter tumblr glossier meh slow-carb. Green juice woke poutine sustainable vape lumbersexual leggings affogato keffiyeh XOXO selvage wayfarers hot chicken before they sold out slow-carb.
    
 </div>
+
+<h2> React Components</h2>
+
+<Counter />
+
+  ```jsx
+  const Counter = () => {
+  const [count, setCount] = React.useState(0)
+  return (
+    <Wrapper>
+      <h1>counter</h1>
+      <span id="value">{count}</span>
+      <div className="btn-container">
+        <button className="btn dec-btn" onClick={() => setCount(count - 1)}>
+          decrease
+        </button>
+        <button className="btn reset-btn" onClick={() => setCount(0)}>
+          reset
+        </button>
+        <button className="btn inc-btn" onClick={() => setCount(count + 1)}>
+          increase
+        </button>
+      </div>
+    </Wrapper>
+  )
+}
+  ```
+
+  <LikeButton />
+
 
 </section>
