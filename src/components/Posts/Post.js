@@ -7,7 +7,6 @@ import styled from 'styled-components'
 
 const Post = ({ frontmatter, excerpt }) => {
   const { title, image, slug, date, category, readTime } = frontmatter
-  console.log(image)
 
   return (
     <Wrapper>
